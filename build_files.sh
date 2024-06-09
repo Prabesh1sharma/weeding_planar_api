@@ -1,4 +1,8 @@
 echo "BUILD START"
-python3.11.3 -m pip install -r requirements.txt
-python3.11.3 manage.py collectstatic --noinput --clear
+python -m venv env
+source env/bin/activate
+python -m pip install -r requirements.txt
+python manage.py collectstatic --noinput --clear
+mkdir -p staticfiles_build
+cp -r static/* staticfiles_build/
 echo "BUILD END"
