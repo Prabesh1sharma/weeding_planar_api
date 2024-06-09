@@ -1,1 +1,0 @@
-web: gunicorn weeding_planar.wsgi
